@@ -58,6 +58,14 @@ const detail = () => {
       <img src="img/${recipe.image}" />
       <h3>${recipe.title}</h3>
       <p>${recipe.description}</p>
+      <h4>Ingredients</h4>
+      <ul>
+        ${recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+      </ul>
+      <h4>Preparation</h4>
+      <ul>
+        ${recipe.preparation.map(prep => `<li>${prep.step}</li>`).join('')}
+      </ul>
       <a href="/">Back</a>
       `;
     document.querySelector('#root').append(recipeEl);

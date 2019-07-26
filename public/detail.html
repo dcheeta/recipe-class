@@ -18,6 +18,13 @@
             <textarea type="text" placeholder="Description" name="description"></textarea>
             <button onclick="updateRecipe()">Update</button>
         </form>
+
+        <form action="/api/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" />
+            <input type="text" placeholder="File name" name="filename" />
+            <button type="submit">Submit</button>
+        </form>
+
     </div>
 
     <script src="./js/scripts.js"></script>
